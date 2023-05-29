@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+    <center>
+        <img src="{% static 'imagenes/misxv.png' %}" style="max-width:25%;height:auto;"> 
+        <br><br>
+        <h1>Lista de invitados</h1>
+    </center>    
+    <table class="tabla">
+        <thead> <tr> <th>N.P.</th> <th>Nombre</th> <th>Tipo de relación</th> <th>Asistentes</th><th>Dedicatoria</th> </tr> </thead>
+        {% for invitado in invitados %}
+            <tr><th>{{invitado.id}}</th><th>{{ invitado.nombre }}</th><th>{{ invitado.relacion }}</th><th>{{ invitado.asistentes }}</th><th>{{ invitado.dedicatoria }}</th></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

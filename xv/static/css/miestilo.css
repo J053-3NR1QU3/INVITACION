@@ -1,0 +1,169 @@
+body{
+    background-color: #fdbeda;
+}
+.inicio{
+  font-family: 'Ole', cursive;
+  font-size: 50px;
+  max-width: 85%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+.fecha{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 150%;
+}
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabla th, .tabla td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  .tabla thead {
+    background-color: #f2f2f2;
+  }
+  
+  .tabla th {
+    text-align: left;
+  }
+  
+  .tabla tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+.formulario {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+input[type="text"],
+input[type="email"],
+textarea {
+    width:90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+  
+input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+  
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.cuadro_texto {
+  max-width: 85%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.intro {
+  font-family:sans-serif;
+  font-size: 25px;
+  max-width: 85%;
+}
+
+@keyframes barrido {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.barrido-texto {
+  animation: barrido 3s linear;
+}
+
+.contenedor{
+  max-width: 85%;
+  height: auto;
+  margin: auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+.pad_padr{
+  font-family: 'Indie Flower', cursive;
+  color:crimson;
+  font-size: 25px;
+}
+
+.nombres{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 125%;
+}
+.falta{
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+}
+#countdown {
+  font-size: 20px;
+  font-weight: bold;
+}
+.misa{
+  font-size: 180%;
+}
+
+/* carrusel */
+.carousel {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  animation: carousel-animation 10s infinite;
+}
+
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slides img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+    <center>
+        <img src="{% static 'imagenes/flores1.png' %}" width="auto" height:"auto">
+        
+        <div>
+            <p class="inicio"> <img src="{% static 'imagenes/misxv.png' %}" width="35%" height:"35%"><br>Asucena</p><hr>
+            
+            <p class="fecha">Sábado<br>10 de Junio</p>
+        </div>
+        <div class="barrido-texto">
+            <p class="intro">Hay momentos inolvidables que se atesoran en el corazón para siempre. Por esa razón, quiero que compartas conmigo este día tan especial.</p>
+        </div>
+        <div class="contenedor">
+            <center>
+                <p class="pad_padr">Mis papás</p>
+                <p class="nombres">Cristóbal Salguero Zurita <br>Camila Cano García</p>
+                <p class="pad_padr">Mis padrinos</p>
+                <p class="nombres">Jesús Miguel Costa<br>Hortensia Gütierrez Cruz</p>
+            </center>
+        </div>
+        <br>
+        <div class="contenedor">
+            <center>
+                <p class="falta">Para el gran día faltan</p>
+                <div id="countdown"></div>
+            </center>
+        </div>
+        <br>
+        <div class="contenedor">
+            <center>
+                <p class="falta">¿Dondé?</p>
+                <p class="misa">Misa</p>
+                <div class="carousel">
+                    <div class="slides">
+                      <img src="{% static 'imagenes/iglesia1.jpg' %}">
+                      <img src="{% static 'imagenes/iglesia2.jpg' %}">
+                    </div>
+                </div>
+                <img src="{% static 'imagenes/mariposa.png' %}" width="30%" height="30%">
+                <p>Templo de Ocotlán de Morelos</p>
+                <p>Hora</p>
+                <p>5:00 pm</p>
+                <p>Dirección</p>
+                <p>C. Zaragoza 3, Centro, 71510 Ocotlán de Morelos, Oax.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61348.173483420534!2d-96.70060101962247!3d16.795750220939023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c740a55371b40f%3A0x2d662b17f3cdbfe3!2sParque%20de%20Ocotl%C3%A1n!5e0!3m2!1ses-419!2smx!4v1684729427316!5m2!1ses-419!2smx" width="80%" height="80%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </center>
+        </div>
+        <br><br>
+
+        <div class="contenedor">
+            <center>
+                <p class="falta">Recepción</p>
+                <div class="carousel">
+                    <div class="slides">
+                      <img src="{% static 'imagenes/casa1.png' %}">
+                      <img src="{% static 'imagenes/casa.png' %}">
+                    </div>
+                </div>
+                <img src="{% static 'imagenes/mariposa1.png' %}" width="30%" height="30%">
+                <p>La casa de la abuela</p>
+                <p>Hora</p>
+                <p>7:00 pm</p>
+                <p>Dirección</p>
+                <p>Libres 133, Barrio de Arriba, 71510 Ocotlán de Morelos, Oax.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.6102734056335!2d-96.67598588513187!3d16.79605438843552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c740af7002c5a5%3A0x7cf263fd69e95082!2sLa%20Casa%20de%20la%20Abuela!5e0!3m2!1ses-419!2smx!4v1685397913043!5m2!1ses-419!2smx" width="80%" height="80%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <img src="{% static 'imagenes/flores.png' %}" width="100%" height="auto">
+            </center>
+        </div>
+        <div class="barrido-texto">
+            <p class="intro">Hay momentos en la
+                vida que son especiales
+                por sí solos. Compartirlos
+                con las personas que
+                aprecias y quieres los
+                convierte en mágicos
+                e inolvidables. Gracias
+                por estar aquí.</p>
+        </div>
+        <h3>Por favor, confirma tu asistencia</h3>
+        <form method="POST" class="formulario">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Asistiré">
+        </form>
+        <br><br><br>
+        <div>
+            <p class="inicio"> <img src="{% static 'imagenes/misxv.png' %}" width="35%" height:"35%"><br>Asucena</p><hr>
+        </div>
+    </center>
+{% endblock %}
